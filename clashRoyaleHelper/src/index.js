@@ -41,7 +41,7 @@ MinecraftHelper.prototype = Object.create(AlexaSkill.prototype);
 MinecraftHelper.prototype.constructor = MinecraftHelper;
 
 MinecraftHelper.prototype.eventHandlers.onLaunch = function (launchRequest, session, response) {
-    var speechText = "Welcome to the Minecraft Helper. You can ask a question like, what's the recipe for a chest? ... Now, what can I help you with.";
+    var speechText = "Welcome to the clash royale Helper. You can ask a question like, what's the damage of a witch? ... Now, what can I help you with.";
     // If the user either does not reply to the welcome message or says something that is not
     // understood, they will be prompted again with this text.
     var repromptText = "For instructions on what you can say, please say help me.";
@@ -96,8 +96,8 @@ MinecraftHelper.prototype.intentHandlers = {
     },
 
     "AMAZON.HelpIntent": function (intent, session, response) {
-        var speechText = "You can ask questions about minecraft such as, what's the recipe for a chest, or, you can say exit... Now, what can I help you with?";
-        var repromptText = "You can say things like, what's the recipe for a chest, or you can say exit... Now, what can I help you with?";
+        var speechText = "You can ask questions about clash royale such as, what's the damage for a witch, or, you can say exit... Now, what can I help you with?";
+        var repromptText = "You can say things like, what's the damage for a witch, or you can say exit... Now, what can I help you with?";
         var speechOutput = {
             speech: speechText,
             type: AlexaSkill.speechOutputType.PLAIN_TEXT
