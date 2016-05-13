@@ -15,7 +15,7 @@
  *
  * Examples:
  * One-shot model:
- *  User: "Alexa, ask Minecraft Helper how to make paper."
+ *  User: "Alexa, ask ClashRoyale Helper how to make paper."
  *  Alexa: "(reads back recipe for paper)"
  */
 
@@ -27,28 +27,28 @@ var AlexaSkill = require('./AlexaSkill'),
 var APP_ID = undefined; //replace with 'amzn1.echo-sdk-ams.app.[your-unique-value-here]';
 
 /**
- * MinecraftHelper is a child of AlexaSkill.
+ * ClashRoyaleHelper is a child of AlexaSkill.
  * To read more about inheritance in JavaScript, see the link below.
  *
  * @see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript#Inheritance
  */
-var MinecraftHelper = function () {
+var ClashRoyaleHelper = function () {
     AlexaSkill.call(this, APP_ID);
 };
 
 // Extend AlexaSkill
-MinecraftHelper.prototype = Object.create(AlexaSkill.prototype);
-MinecraftHelper.prototype.constructor = MinecraftHelper;
+ClashRoyaleHelper.prototype = Object.create(AlexaSkill.prototype);
+ClashRoyaleHelper.prototype.constructor = ClashRoyaleHelper;
 
-MinecraftHelper.prototype.eventHandlers.onLaunch = function (launchRequest, session, response) {
-    var speechText = "Welcome to the clash royale Helper. You can ask a question like, what's the damage of a witch? ... Now, what can I help you with.";
+ClashRoyaleHelper.prototype.eventHandlers.onLaunch = function (launchRequest, session, response) {
+    var speechText = "Welcome to the clash royale Helper. You can ask a question like, can you tell me something about the witch? ... Now, what can I help you with.";
     // If the user either does not reply to the welcome message or says something that is not
     // understood, they will be prompted again with this text.
     var repromptText = "For instructions on what you can say, please say help me.";
     response.ask(speechText, repromptText);
 };
 
-MinecraftHelper.prototype.intentHandlers = {
+ClashRoyaleHelper.prototype.intentHandlers = {
     "RecipeIntent": function (intent, session, response) {
         var itemSlot = intent.slots.Item,
             itemName;
@@ -96,8 +96,8 @@ MinecraftHelper.prototype.intentHandlers = {
     },
 
     "AMAZON.HelpIntent": function (intent, session, response) {
-        var speechText = "You can ask questions about clash royale such as, what's the damage for a witch, or, you can say exit... Now, what can I help you with?";
-        var repromptText = "You can say things like, what's the damage for a witch, or you can say exit... Now, what can I help you with?";
+        var speechText = "You can ask questions about clash royale such as, can you tell me something about the witch, or, you can say exit... Now, what can I help you with?";
+        var repromptText = "You can say things like, can you tell me something about the witch, or you can say exit... Now, what can I help you with?";
         var speechOutput = {
             speech: speechText,
             type: AlexaSkill.speechOutputType.PLAIN_TEXT
@@ -111,6 +111,6 @@ MinecraftHelper.prototype.intentHandlers = {
 };
 
 exports.handler = function (event, context) {
-    var minecraftHelper = new MinecraftHelper();
-    minecraftHelper.execute(event, context);
+    var ClashRoyaleHelper = new ClashRoyaleHelper();
+    ClashRoyaleHelper.execute(event, context);
 };
