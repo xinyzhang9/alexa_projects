@@ -12,7 +12,7 @@ module.exports = {
     "knight" : "A tough melee fighter. The Barbarian's handsome, cultured cousin. Rumour has it that he was knighted based on the sheer awesomeness of his moustache alone",
     "archers" : "A pair of unarmored ranged attackers. They'll help you with ground and air unit attacks, but you're on your own with colouring your hair",
     "bomber" : "Small, lightly protected skeleton that throws bombs. Deals area damage that can wipe out a swarm of enemies",
-    "giant" : "Slow but durable, only attacks buildings. A real one-man wrecking crew"
+    "giant" : "Slow but durable, only attacks buildings. A real one-man wrecking crew",
     "musketeer" : "Don't be fooled by her delicately coiffed hair, the Musketeer is a mean shot with her trusty boomstick",
     "baby dragon" : "Flying troops that deals area damage. Baby dragons hatch cute, hungry, and ready for a barbecue",
     "mini pekka" : "The arena is a certified butterfly-free zone. No distractions for P.E.K.K.A, only destruction",
@@ -41,5 +41,6 @@ module.exports = {
     "three musketeers" : "Trio of powerful, independent markswomen, fighting for justice and honor. Disrespecting them would not be just a mistake, it would be a cardinal sin!",
     "dark prince" : "Dealing area damage with each swing and double after charging, the Dark Prince is a formidable fighter. To harm his squishy core, break his shield first",
     "princess" : "Shoots a volley of flaming arrows halfway across the Arena. The Princess is afraid of germs, so keep the rabble away from her!",
-    "guards" : "Three ruthless bone brothers with shields. Knock off their shields and all that's left are three ruthless bone brothers",
-};
+    "guards" : "Three ruthless bone brothers with shields. Knock off their shields and all that's left are three ruthless bone brothers"
+}
+    
